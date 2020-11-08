@@ -1,2 +1,6 @@
-# B-spring-ioc-container-homework
-Spring IoC Container Basics 课程课后作业。
+@Component 已经可以支持声明一个 bean 了，为何还要再弄个 @Bean 出来？
+答：
+@Component倾向于组件扫描和自动装配。
+但有时自动设置是做不到的。
+假如你要引入第三方库，可是如果你没有源代码，也就无法在其上添加@Component，自动设置也就无从下手。
+但@Bean会返回一个被spring认可的Bean。@Bean所注释的方法内部可以对这个第三方库的实例进行设置。
